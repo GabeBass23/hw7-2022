@@ -28,12 +28,12 @@ document.querySelector("#slider").addEventListener("mouseup", function() {
 
 document.querySelector("#faster").addEventListener("click", function() {
 	video.playbackRate *= 10/9;
-	console.log(video.playbackRate * 100, "%");
+	console.log(video.playbackRate * 100 + "%");
 });
 
 document.querySelector("#slower").addEventListener("click", function() {
 	video.playbackRate *= 0.9;
-	console.log(video.playbackRate * 100, "%");
+	console.log(video.playbackRate * 100 + "%");
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
@@ -58,4 +58,13 @@ document.querySelector("#mute").addEventListener("click", function() {
 	}
 	
 });
+
+document.querySelector("#vintage").addEventListener("click", function() {
+	video.classList.add("oldSchool");
+});
+
+document.querySelector("#orig").addEventListener("click", function() {
+	video.classList.remove("oldSchool");
+});
+
 
