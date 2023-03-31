@@ -22,20 +22,20 @@ document.querySelector("#pause").addEventListener("click", function() {
 	console.log("Pause Video");
 });
 
+document.querySelector("#slider").addEventListener("mousedown", function() {
+	volume = document.querySelector("#slider");
+	volumeVal = volume.value/100;
+	video.volume = volumeVal;
+	console.log("The current value is", volume.value/100);
+});
+
 document.querySelector("#slider").addEventListener("mouseup", function() {
 	volume = document.querySelector("#slider");
 	volumeVal = volume.value/100;
 	video.volume = volumeVal;
 	document.querySelector("#volume").innerText = volume.value + "%";
-	console.log("The current value is ", volume.value/100);
+	console.log("The current value is", volume.value/100);
 	console.log(document.querySelector("#volume"));
-});
-
-document.querySelector("#slider").addEventListener("click", function() {
-	volume = document.querySelector("#slider");
-	volumeVal = volume.value/100;
-	video.volume = volumeVal;
-	console.log("The current value is ", volume.value/100);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
